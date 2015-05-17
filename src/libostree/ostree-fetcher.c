@@ -176,8 +176,8 @@ _ostree_fetcher_init (OstreeFetcher *self)
                                                        SOUP_SESSION_SSL_USE_SYSTEM_CA_FILE, TRUE,
                                                        SOUP_SESSION_USE_THREAD_CONTEXT, TRUE,
                                                        SOUP_SESSION_ADD_FEATURE_BY_TYPE, SOUP_TYPE_REQUESTER,
-                                                       SOUP_SESSION_TIMEOUT, 60,
-                                                       SOUP_SESSION_IDLE_TIMEOUT, 60,
+                                                       SOUP_SESSION_TIMEOUT, 0,
+                                                       SOUP_SESSION_IDLE_TIMEOUT, 0,
                                                        NULL);
 
   http_proxy = g_getenv ("http_proxy");
